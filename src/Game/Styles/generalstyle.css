@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --tile-color: #bfc1d5;
+  --grid-color: #7d82aa;
+  --bkg-color: #222855;
+  --dark-color: #111533;
+  --med-color: #494f80;
+  --light-color: #bac2ff;
+  --white-color: white;
+}
+body {
+  background-color: var(--bkg-color);
+}

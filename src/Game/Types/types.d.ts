@@ -9,7 +9,7 @@ interface Tile {
 
 type Settings = {
   theme: "LIGHT" | "DARK";
-  lastClick: number | undefined;
+  lastClick?: number;
   animationSpeed: number;
 };
 

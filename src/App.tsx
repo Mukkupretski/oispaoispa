@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import { ReactElement, useEffect } from "react";
 import Firebase from "./Firebase/Firebase";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Firestore from "./Firebase/Firestore";
@@ -8,8 +8,13 @@ import Game from "./Game/Game";
 import GameBrowser from "./Game/GameBrowser";
 import Editor from "./Editor/Editor";
 import "./Game/Styles/generalstyle.css";
+import { useSettings } from "./Game/Contexts/SettingsContext";
 
 export default function App(): ReactElement {
+  const settings = useSettings();
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", settings.theme);
+  }, [settings.theme]);
   return (
     <>
       <BrowserRouter>

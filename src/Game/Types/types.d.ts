@@ -2,10 +2,22 @@ interface Tile {
   icon?: string;
   text?: string;
   color?: string;
+  fontSize?: number;
+  textColor?: string;
+  order: number;
 }
 
+type Settings = {
+  theme: "LIGHT" | "DARK";
+  lastClick: number | undefined;
+  animationSpeed: number;
+};
+
 interface GameTile extends Tile {
-  status?: "NEW" | "MERGED";
+  status?: "NEW" | "MERGED" | "MERGING" | "NONE";
+  id: string;
+  x: number;
+  y: number;
 }
 
 type Game = {
@@ -16,7 +28,8 @@ type Game = {
     message: string;
   };
   maxPower: number;
-  tiles: tile[];
+  tiles: Tile[];
   bkgImage: string;
+  gameTheme?: "DARK" | "LIGHT";
 };
-type CurrentGame = (GameTile | undefined)[][];
+type CurrentGame = GameTile[];

@@ -1,7 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", system-ui;
+  font-weight: 400;
+  transition: background-color 0.3s ease-out;
 }
 
 :root {
@@ -13,6 +17,14 @@
   --light-color: #bac2ff;
   --white-color: white;
 }
+
+[data-theme="LIGHT"] {
+  /* Make a good theme! */
+  --bkg-color: #faf8ef;
+  --med-color: #cdc1b4;
+  --dark-color: #bbada0;
+}
+
 body {
   background-color: var(--bkg-color);
 }

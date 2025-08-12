@@ -1,0 +1,255 @@
+#editor {
+  background-color: var(--darkmed-color);
+  padding: 50px;
+  margin-top: 100px;
+  width: 600px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+  border: 3px solid var(--light-color);
+}
+#tilelist {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--darkdarkmed-color);
+  padding: 20px;
+  gap: 10px;
+
+  border-radius: 5px;
+}
+hr {
+  width: 100%;
+  margin-bottom: 20px;
+  border: none;
+  height: 2px;
+  background-color: var(--light-color);
+}
+.title {
+  font-size: 32px;
+  color: var(--light-color);
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+.title-2 {
+  font-size: 28;
+  font-weight: 500;
+  color: var(--light-color);
+  margin-bottom: 30px;
+}
+.tilemaker {
+  background-color: var(--dark-color);
+  width: 400px;
+  padding: 10px;
+  padding-right: 70px;
+  border-radius: 5px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  height: 120px;
+  position: relative;
+}
+.text-1 {
+  color: var(--light-color);
+  font-weight: 500;
+}
+.btn {
+  border: none;
+  background-color: var(--dark-color);
+  padding: 4px;
+  border-radius: 3px;
+  color: var(--light-color);
+}
+.btn:hover {
+  background-color: var(--med-color);
+}
+
+.tilemaker .toggler {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 5px;
+  background-color: var(--med-color);
+  padding: 3px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.tilemaker .mover {
+  top: 0;
+  position: absolute;
+  border-radius: 3px;
+  width: 20px;
+  background-color: var(--light-color);
+  height: 100%;
+  width: 50%;
+  z-index: 0;
+  transition: left 0.1s ease-out;
+}
+.tilemaker .toggler img {
+  user-select: none;
+  position: relative;
+  z-index: 1;
+}
+
+button.addImg {
+  width: 100px;
+  height: 100px;
+  background-color: var(--bkg-color);
+}
+.tilemaker .imgContainer {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+.tilemaker .tileImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.tilemaker .imgContainer div:first-child {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tilemaker .imgContainer div:first-child:hover {
+  background-color: hsla(0, 0%, 0%, 0.4);
+}
+.tilemaker .imgContainer div > img {
+  display: none;
+}
+.tilemaker .imgContainer div:hover > img {
+  display: unset;
+  width: 50px;
+  height: 50px;
+}
+
+.tilemaker input[type="file"] {
+  display: none;
+}
+.tilemaker .preview {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.tilemaker .preview label {
+  font-weight: 900;
+}
+.tileform {
+  width: auto;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 60px 60px 60px;
+  grid-template-rows: 40px;
+  column-gap: 10px;
+  row-gap: 15px;
+}
+.tileform div:first-child {
+  grid-column: span 3;
+}
+.inputcontainer,
+.colorcontainer,
+.checkboxcontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: center;
+}
+.checkboxcontainer {
+  gap: 8px;
+  flex-direction: row;
+  grid-column: span 2;
+}
+
+.editorinput {
+  padding: 3px;
+  background-color: var(--med-color);
+  border: none;
+  width: 100%;
+  height: 25px;
+  border-radius: 2px;
+  color: var(--dark-color);
+}
+.editorinput2 {
+  padding: 3px;
+  border: none;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--med-color);
+  width: 100%;
+  height: 25px;
+  font-size: 16px;
+  color: var(--light-color);
+  background: none;
+  transition: border 0.3s linear;
+}
+.editorinput2:focus {
+  border-bottom-color: var(--light-color);
+}
+.editorinput2:focus {
+  outline: none;
+}
+.editorcolorpicker {
+  padding: 0;
+  appearance: none;
+  border: none;
+  width: 100%;
+  height: 25px;
+  border-radius: 2px;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+  border: 2px solid var(--med-color);
+}
+input[type="color"]:focus::-webkit-color-swatch {
+  border: 2px solid var(--light-color);
+}
+.editorinput:focus {
+  background-color: var(--light-color);
+}
+.editorinput:focus {
+  outline: none;
+}
+.editorcheckbox {
+  appearance: none;
+  background-color: var(--dark-color);
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  position: relative;
+  top: 3px;
+  outline: none;
+}
+.editorcheckbox:hover,
+.editorcheckbox:focus-visible {
+  background-color: var(--darkdarkmed-color);
+}
+.checkboxcontainer > div {
+  position: relative;
+}
+.checkboxcontainer .checkmark {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 12px;
+  transform: rotate(225deg);
+  border-top: 2px solid var(--light-color);
+  border-left: 2px solid var(--light-color);
+  pointer-events: none;
+}

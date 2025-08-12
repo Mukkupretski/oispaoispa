@@ -1,0 +1,10 @@
+.dummygrid {
+  background-color: var(--dark-color);
+  display: grid;
+}
+.dummygrid > .dum {
+  background-color: var(--med-color);
+  width: 100%;
+  height: 100%;
+  box-sizing: content-box;
+}

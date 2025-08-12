@@ -12,10 +12,16 @@
   --tile-color: #bfc1d5;
   --grid-color: #7d82aa;
   --bkg-color: #222855;
-  --dark-color: #111533;
+  --dark-color: #111432;
+  --darkmed-color: #1d2458;
+  --darkdarkmed-color: #171c45;
   --med-color: #494f80;
   --light-color: #bac2ff;
   --white-color: white;
+  --game-color-1: #0b3255;
+  --game-color-2: #4f7faa;
+  --game-color-3: #bf9e69;
+  --game-color-4: #805d26;
 }
 
 [data-theme="LIGHT"] {
@@ -23,8 +29,27 @@
   --bkg-color: #faf8ef;
   --med-color: #cdc1b4;
   --dark-color: #bbada0;
+  --darkdarkmed-color: #b1a091;
+  --darkmed-color: #a69382;
+  --light-color: #716050;
+  --game-color-1: #eee4da;
+  --game-color-2: #f2b179;
+  --game-color-3: #f67c5f;
+  --game-color-4: #edcf72;
 }
 
 body {
   background-color: var(--bkg-color);
+}
+
+::-webkit-scrollbar {
+  appearance: none;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--light-color);
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  width: 5px;
+  background-color: var(--dark-color);
 }

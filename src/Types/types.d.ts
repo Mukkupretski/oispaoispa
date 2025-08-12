@@ -1,11 +1,18 @@
 interface Tile {
   icon?: string;
+  imageData?: ImageContent;
   text?: string;
   color?: string;
   fontSize?: number;
   textColor?: string;
+  imageTile?: boolean;
+  id?: string;
   order: number;
 }
+type ImageContent = {
+  file?: Blob;
+  image?: string;
+};
 
 type Settings = {
   theme: "LIGHT" | "DARK";
@@ -27,9 +34,11 @@ type Game = {
     icon: string;
     message: string;
   };
-  maxPower: number;
   tiles: Tile[];
-  bkgImage: string;
+  author: string;
+  name: string;
+  bkgImage?: string;
+  endless: boolean;
   gameTheme?: "DARK" | "LIGHT";
 };
 type CurrentGame = GameTile[];

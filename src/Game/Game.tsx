@@ -2,14 +2,13 @@ import { ReactElement } from "react";
 import "./Styles/gamestyle.css";
 import Board from "./Board/Board";
 import { GameContextProvider } from "./Contexts/GameContext";
-import { useSetSettings, useSettings } from "./Contexts/SettingsContext";
 
 export default function Game(): ReactElement {
-  const setSettings = useSetSettings();
-  const settings = useSettings();
   const game: Game = {
+    endless: false,
+    author: "Me",
+    name: "d",
     id: "1",
-    maxPower: 10,
     tiles: [
       {
         text: "SKILL ISSUE",
@@ -29,31 +28,11 @@ export default function Game(): ReactElement {
   };
   return (
     <div id="game">
-      <input
-        aria-label="theme"
-        type="checkbox"
-        value={settings.theme}
-        onChange={(e) => {
-          setSettings((s) => {
-            return { ...s, theme: e.target.checked ? "LIGHT" : "DARK" };
-          });
-        }}
-      ></input>
-      <input
-        aria-label="skill issue"
-        type="range"
-        min={0}
-        max={100}
-        value={settings.animationSpeed * 10}
-        onChange={(e) => {
-          setSettings((s) => {
-            return {
-              ...s,
-              animationSpeed: (e.target.value as unknown as number) / 10,
-            };
-          });
-        }}
-      ></input>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+
       <GameContextProvider>
         <Board game={game}></Board>
       </GameContextProvider>
